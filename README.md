@@ -1,6 +1,8 @@
-# Solr Module
+# Solr Module for Drupal
 
-[![Build Status](https://travis-ci.org/vamsee/puppet-solr.png)](https://travis-ci.org/vamsee/puppet-solr)
+(This is a fork of [vamsee/puppet-solr](http://github.com/vamsee/puppet-solr),
+which adds Drupal-specific configuration from the
+[Drupal Apachesolr module](http://drupal.org/project/apachesolr).)
 
 This is a puppet module for setting up a multi-core solr instance.
 
