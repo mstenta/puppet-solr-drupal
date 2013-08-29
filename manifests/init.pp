@@ -29,7 +29,10 @@
 #
 # Copyright 2012 Vamsee Kanakala, unless otherwise noted.
 #
-class solr ($cores = ['development','test']) {
+class solr (
+  $cores = ['development','test'],
+  $port = '8080',
+  ) {
   
   $jetty_home = "/usr/share/jetty"
   $solr_home = "/usr/share/solr"
@@ -87,7 +90,7 @@ class solr ($cores = ['development','test']) {
   file { 'jetty-default':
     ensure => file,
     path => "/etc/default/jetty",
-    source => "puppet:///modules/solr/jetty-default",
+    content => template('solr/jetty-default.erb'),
     require => File['jetty-context.xml']
   }
 
